@@ -1,0 +1,25 @@
+{
+    "name": "OwlHelper",
+    "description": "Rate my professor tool for class registration on KSU's Owlexpress",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "presistent": false,
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.owlexpress.kennesaw.edu/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "action": {},
+    "permissions": [
+        "storage",
+        "activeTab"
+    ]
+}
